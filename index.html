@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Deekshitha Bheemavarapu — Portfolio</title>
+  <meta name="description" content="Portfolio of Deekshitha Bheemavarapu" />
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071028 0%, #081428 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 18px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+      line-height:1.45;
+    }
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    /* SIDEBAR CARD */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+    }
+    .profile{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .avatar{
+      width:88px;
+      height:88px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#143450,#1f7280);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:22px;
+      color:rgba(255,255,255,0.95);
+      box-shadow: inset 0 -8px 24px rgba(0,0,0,0.35);
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.2px;
+    }
+    .muted{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:6px;
+    }
+
+    .contact{
+      margin-top:18px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      font-size:14px;
+    }
+    .contact a{ color:var(--accent); text-decoration:none; word-break:break-all; }
+    .section-title{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:1px;
+    }
+
+    .pill-list{
+      margin-top:10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      background:var(--glass);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:#d9eef0;
+    }
+
+    .address{
+      margin-top:12px;
+      font-size:14px;
+      color:#d6e7ee;
+    }
+
+    /* MAIN */
+    .main {
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+    .hero{
+      background:linear-gradient(90deg, rgba(255,255,255,0.018), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .about{
+      max-width:72%;
+    }
+    .cta{
+      text-align:right;
+      min-width:160px;
+    }
+    .cta a{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      background:linear-gradient(90deg,#0ea5a3,#60a5fa);
+      color:#022;
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    /* Cards inside main */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:18px;
+    }
+    .card h3{ margin:0 0 8px 0; font-size:16px }
+    .edu-item{ margin-bottom:12px; padding-bottom:8px; border-bottom:1px dashed rgba(255,255,255,0.03) }
+    .edu-meta{ color:var(--muted); font-size:13px }
+    .skills-list{ display:flex; gap:8px; flex-wrap:wrap; margin-top:8px }
+    .skill{ background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:8px; font-weight:600; font-size:13px }
+
+    .fullwidth{
+      grid-column: 1 / -1;
+    }
+
+    .hobbies{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px }
+    .hob{ background:rgba(255,255,255,0.02); padding:8px 10px; border-radius:8px; font-size:13px }
+
+    footer{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+      grid-column: 1 / -1;
+    }
+
+    /* small screens */
+    @media (max-width:880px){
+      body{ padding:22px; }
+      .wrap{ grid-template-columns: 1fr; }
+      .hero .about{ max-width:100%; }
+      .grid{ grid-template-columns: 1fr; }
+      .cta{ text-align:left }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- LEFT / SIDEBAR -->
+    <aside class="card">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true">DB</div>
+        <div>
+          <h1>Deekshitha Bheemavarapu</h1>
+          <div class="muted">Fresher • BCA student</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="section-title">Contact</div>
+        <div><strong>Email:</strong> <a href="mailto:Deekshitha.bheemavarapu123@gmail.com">Deekshitha.bheemavarapu123@gmail.com</a></div>
+        <div><strong>Phone:</strong> <a href="tel:+919652721666">+91 96527 21666</a></div>
+        <div class="address">
+          Nadipudi canal road, Jai Bheem Nagar,<br />
+          Amalapuram, Dr. B.R. Ambedkar Konaseema district,<br />
+          Andhra Pradesh, India — 533201
+        </div>
+
+        <div class="section-title">Personal</div>
+        <div class="muted">DOB</div>
+        <div>03 June 2005</div>
+        <div style="margin-top:8px">
+          <div class="muted">Languages</div>
+          <div>English, Telugu</div>
+        </div>
+      </div>
+
+      <div class="section-title">Skills</div>
+      <div class="pill-list" aria-hidden="false">
+        <div class="pill">HTML</div>
+        <div class="pill">Java</div>
+        <div class="pill">MS Office</div>
+      </div>
+
+      <div class="section-title">Hobbies</div>
+      <div class="pill-list">
+        <div class="pill">Listening to music</div>
+        <div class="pill">Reading books</div>
+        <div class="pill">Playing sudoku</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT / MAIN -->
+    <main class="main">
+      <div class="hero card">
+        <div class="about">
+          <h2 style="margin:0 0 6px 0">Hello — I'm Deekshitha</h2>
+          <p class="muted" style="margin:0">
+            I'm a BCA student pursuing studies at Aditya Degree College, Amalapuram. I enjoy building simple web pages and learning programming fundamentals in Java. I'm interested in internships and entry-level opportunities where I can learn and contribute.
+          </p>
+        </div>
+        <div class="cta">
+          <a href="mailto:Deekshitha.bheemavarapu123@gmail.com">Contact Me</a>
+          <div style="margin-top:8px; font-size:13px; color:var(--muted)">Available for internships</div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <section class="card">
+          <h3>Education</h3>
+
+          <div class="edu-item">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <strong>BCA — Aditya Degree College, Amalapuram</strong>
+              <div class="edu-meta">Pursuing</div>
+            </div>
+            <div class="edu-meta">Adikavi Nannaya University — Current (7.9% till 3rd sem as in resume)</div>
+          </div>
+
+          <div class="edu-item">
+            <strong>Intermediate (B.I.P.C) — Aditya Junior College</strong>
+            <div class="edu-meta">Board of Intermediate Education — 2023 — 46.3%</div>
+          </div>
+
+          <div class="edu-item">
+            <strong>S.S.C — Bhashyam Public School</strong>
+            <div class="edu-meta">Board of Secondary Education — 2021 — 9.9%</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Profile & Experience</h3>
+          <p class="muted">Overview</p>
+          <p>I am a fresher looking for opportunities to apply my HTML and Java skills. I have familiarity with MS Office and a desire to grow in web development and software fundamentals.</p>
+
+          <div style="margin-top:12px;">
+            <div class="muted">Personal Profile (from uploaded CV)</div>
+            <ul style="margin:8px 0 0 18px">
+              <li>Father: Bheemavarapu Sri Anjaneylu</li>
+              <li>Mother: Bheemavarapu Satya Tripura</li>
+              <li>Nationality: Indian</li>
+              <li>Gender: Female</li>
+              <li>Marital Status: Single</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card fullwidth">
+          <h3>Skills & Tools</h3>
+          <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">Java</div>
+            <div class="skill">MS Office</div>
+            <!-- add more skills here -->
+          </div>
+
+          <h3 style="margin-top:14px">Hobbies</h3>
+          <div class="hobbies">
+            <div class="hob">Listening to music</div>
+            <div class="hob">Reading books</div>
+            <div class="hob">Playing sudoku</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Projects</h3>
+          <p class="muted">Add your projects here</p>
+          <ul style="margin:8px 0 0 18px">
+            <li>Project 1 — small description (e.g. HTML landing page)</li>
+            <li>Project 2 — small description (e.g. Java console app)</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h3>Download / CV</h3>
+          <p class="muted">If you'd like to link to the uploaded CV or a PDF, replace the '#' with the file URL or a hosted path.</p>
+          <p><a href="#" style="color:var(--accent); text-decoration:none; font-weight:600">Download CV (PDF)</a></p>
+        </section>
+
+        <footer>
+          The information on this page was created using details from the uploaded resume. :contentReference[oaicite:1]{index=1}
+        </footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
